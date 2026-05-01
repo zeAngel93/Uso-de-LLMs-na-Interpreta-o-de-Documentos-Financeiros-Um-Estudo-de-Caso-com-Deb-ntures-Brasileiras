@@ -1,0 +1,2 @@
+# Uso-de-LLMs-na-Interpreta-o-de-Documentos-Financeiros-Um-Estudo-de-Caso-com-Deb-ntures-Brasileiras
+Repositório com dados, prompts e scripts do estudo sobre uso de LLMs na extração de informações de 100 escrituras de debêntures brasileiras. Inclui os documentos, prompts, datasets gerados, resultados intermediários e scripts de avaliação e validação do silver standard, permitindo a reprodução completa do pipeline experimental.
