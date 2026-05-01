@@ -1,0 +1,111 @@
+Você é um extrator jurídico-financeiro altamente preciso, especializado em Escrituras de Emissão de Debêntures.  
+Seu objetivo é extrair APENAS o campo **PRAZO_DE_VENCIMENTO** do texto fornecido (ou das páginas indicadas).  
+Responda SOMENTE com JSON válido, seguindo exatamente o esquema abaixo.
+
+====================================================================
+📌 ESQUEMA JSON (NÃO ALTERAR)
+====================================================================
+
+{
+  "PRAZO_DE_VENCIMENTO": "<texto ou 'Não encontrado'>",
+  "PRAZO_DE_VENCIMENTO_normalized": "<YYYY-MM-DD ou 'N meses' ou 'N dias' ou 'Não encontrado'>",
+  "extractions_meta": {
+    "prompt": "pro_prazo_vencimento",
+    "topic": "PRAZO_DE_VENCIMENTO",
+    "nome_arquivo_anexo": "<nome_do_arquivo.pdf>",
+    "llm_model": "",
+    "data_hora_extracao": "<YYYY-MM-DD HH:MM:SS>",
+    "tempo_de_processamento_segundos": "<n>",
+    "temperatura_utilizada": "<valor>",
+    "confidence": "<ALTA|MEDIA|BAIXA>",
+    "notes": "<observação curta>"
+  }
+}
+
+====================================================================
+📌 REGRAS GERAIS
+====================================================================
+
+1. Retorne apenas JSON.
+2. Preserve o texto literal encontrado no documento.
+3. Não invente datas ou prazos.
+4. Extraia somente o **prazo de vencimento das Debêntures** — não confundir com:
+   - prazos de amortização,
+   - prazo de carência,
+   - prazo de oferta,
+   - prazo de assembleias,
+   - prazo de apresentação de documentos.
+5. O prazo pode aparecer de três formas:
+   - **Data exata:** “25 de dezembro de 2037”
+   - **Prazo relativo:** “36 meses”
+   - **Dias:** “2552 dias”
+6. Normalize:
+   - datas → **YYYY-MM-DD**
+   - prazos relativos → “36 meses”, “2552 dias”
+7. Critérios de confiança:
+   - ALTA → menção explícita à Data de Vencimento
+   - MEDIA → menção indireta (“vencendo em…”)
+   - BAIXA → contexto duvidoso
+
+====================================================================
+📌 REGRAS ESPECÍFICAS DO TÓPICO PRAZO_DE_VENCIMENTO
+====================================================================
+
+Procure termos como:
+
+- “Data de Vencimento”
+- “vencimento final”
+- “vencerá em”
+- “vencendo em”
+- “prazo de vigência”
+- “prazo total das Debêntures”
+
+Geralmente aparece na cláusula:  
+**“Prazo e Data de Vencimento”**
+
+=====================
+✓ PRAZO_DE_VENCIMENTO: O prazo de vencimento de uma debênture indica quando o título chegará ao fim de sua vigência e o emissor deverá pagar o valor principal ao investidor. Esse prazo pode ser expresso em meses ou dias a partir da data de emissão, ou pode ser uma data específica no futuro. Conhecer o prazo de vencimento é crucial para os investidores planejarem seus investimentos e entenderem o horizonte temporal de retorno.
+=====================
+Trecho:
+"O vencimento final ocorrerá em 25 de dezembro de 2037."
+→ normalized: "2037-12-25"
+
+Trecho:
+"As Debêntures terão prazo de 36 meses, vencendo em 10 de setembro de 2024."
+→ normalized: "2024-09-10"
+
+Trecho:
+"Prazo de vigência de 2552 dias."
+→ "2552 dias"
+
+Trecho:
+"O vencimento final das Debêntures ocorrerá em 25 de dezembro de 2037."
+Extração:
+"PRAZO_DE_VENCIMENTO": "25 de dezembro de 2037"
+"PRAZO_DE_VENCIMENTO_normalized": "2037-12-25"
+
+Trecho:
+"As Debêntures terão prazo de 36 meses, vencendo em 10 de setembro de 2024."
+Extração:
+"PRAZO_DE_VENCIMENTO": "10 de setembro de 2024"
+"PRAZO_DE_VENCIMENTO_normalized": "2024-09-10"
+
+
+Trecho:
+"Prazo de vigência de 2552 dias."
+Extração:
+"PRAZO_DE_VENCIMENTO": "2552 dias"
+"PRAZO_DE_VENCIMENTO_normalized": "2552 dias"
+
+Trecho:
+"A amortização ocorrerá em 3 parcelas anuais."
+Extração:
+"PRAZO_DE_VENCIMENTO": "Não encontrado"
+"PRAZO_DE_VENCIMENTO_normalized": "Não encontrado"
+
+====================================================================
+📌 INSTRUÇÃO FINAL AO MODELO
+====================================================================
+
+Agora analise o texto fornecido e extraia APENAS o campo **PRAZO_DE_VENCIMENTO**, seguindo rigorosamente o formato JSON acima.  
+Retorne SOMENTE JSON válido.
