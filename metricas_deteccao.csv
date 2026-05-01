@@ -1,0 +1,57 @@
+modelo,prompt,dataset_legivel,precision_det,recall_det,f1_det,support_det
+Claude Sonnet 4.5 Com raciocínio,basic,zeroshoot,0.9667,0.9869,0.9767,0
+Claude Sonnet 4.5 Com raciocínio,pro_amortizacao,topics,0.9798,1.0,0.9898,0
+Claude Sonnet 4.5 Com raciocínio,pro_cnpj_emissor,topics,0.98,1.0,0.9899,0
+Claude Sonnet 4.5 Com raciocínio,pro_covenants_financeiros,topics,0.9494,0.9868,0.9677,0
+Claude Sonnet 4.5 Com raciocínio,pro_data_emissao,topics,0.9697,1.0,0.9846,0
+Claude Sonnet 4.5 Com raciocínio,pro_destinacao_recursos,topics,0.9798,1.0,0.9898,0
+Claude Sonnet 4.5 Com raciocínio,pro_emissor,topics,1.0,1.0,1.0,0
+Claude Sonnet 4.5 Com raciocínio,pro_geral,conhecimento_12,0.9843,0.9843,0.9843,0
+Claude Sonnet 4.5 Com raciocínio,pro_numero_emissao,topics,0.98,1.0,0.9899,0
+Claude Sonnet 4.5 Com raciocínio,pro_prazo_vencimento,topics,0.9794,0.9896,0.9845,0
+Claude Sonnet 4.5 Com raciocínio,pro_publico_alvo,topics,0.9898,1.0,0.9949,0
+Claude Sonnet 4.5 Com raciocínio,pro_regime_colocacao,topics,0.9897,0.9897,0.9897,0
+Claude Sonnet 4.5 Com raciocínio,pro_taxa_juros,topics,0.97,1.0,0.9848,0
+Claude Sonnet 4.5 Com raciocínio,pro_valor_total_emissao,topics,0.9898,1.0,0.9949,0
+GPT-5.1 Com raciocínio,basic,zeroshoot,0.9921,0.9913,0.9917,0
+GPT-5.1 Com raciocínio,pro_amortizacao,topics,1.0,0.9897,0.9948,0
+GPT-5.1 Com raciocínio,pro_cnpj_emissor,topics,1.0,1.0,1.0,0
+GPT-5.1 Com raciocínio,pro_covenants_financeiros,topics,0.8706,0.9737,0.9193,0
+GPT-5.1 Com raciocínio,pro_data_emissao,topics,1.0,0.9896,0.9948,0
+GPT-5.1 Com raciocínio,pro_destinacao_recursos,topics,1.0,1.0,1.0,0
+GPT-5.1 Com raciocínio,pro_emissor,topics,1.0,1.0,1.0,0
+GPT-5.1 Com raciocínio,pro_geral,conhecimento_12,0.9921,0.9921,0.9921,0
+GPT-5.1 Com raciocínio,pro_numero_emissao,topics,1.0,0.9898,0.9949,0
+GPT-5.1 Com raciocínio,pro_prazo_vencimento,topics,1.0,1.0,1.0,0
+GPT-5.1 Com raciocínio,pro_publico_alvo,topics,1.0,0.9897,0.9948,0
+GPT-5.1 Com raciocínio,pro_regime_colocacao,topics,1.0,1.0,1.0,0
+GPT-5.1 Com raciocínio,pro_taxa_juros,topics,1.0,1.0,1.0,0
+GPT-5.1 Com raciocínio,pro_valor_total_emissao,topics,0.9896,0.9794,0.9845,0
+Grok 4.1 Com raciocínio,basic,zeroshoot,0.9866,0.9642,0.9753,0
+Grok 4.1 Com raciocínio,pro_amortizacao,topics,1.0,0.9794,0.9896,0
+Grok 4.1 Com raciocínio,pro_cnpj_emissor,topics,1.0,0.9796,0.9897,0
+Grok 4.1 Com raciocínio,pro_covenants_financeiros,topics,1.0,0.7105,0.8308,0
+Grok 4.1 Com raciocínio,pro_data_emissao,topics,1.0,0.9375,0.9677,0
+Grok 4.1 Com raciocínio,pro_destinacao_recursos,topics,1.0,1.0,1.0,0
+Grok 4.1 Com raciocínio,pro_emissor,topics,1.0,0.99,0.995,0
+Grok 4.1 Com raciocínio,pro_geral,conhecimento_12,0.9956,0.9782,0.9868,0
+Grok 4.1 Com raciocínio,pro_numero_emissao,topics,1.0,1.0,1.0,0
+Grok 4.1 Com raciocínio,pro_prazo_vencimento,topics,1.0,0.9688,0.9841,0
+Grok 4.1 Com raciocínio,pro_publico_alvo,topics,0.9897,0.9897,0.9897,0
+Grok 4.1 Com raciocínio,pro_regime_colocacao,topics,1.0,0.9794,0.9896,0
+Grok 4.1 Com raciocínio,pro_taxa_juros,topics,1.0,0.9278,0.9626,0
+Grok 4.1 Com raciocínio,pro_valor_total_emissao,topics,1.0,1.0,1.0,0
+Sonar,basic,zeroshoot,0.9918,0.8421,0.9108,0
+Sonar,pro_amortizacao,topics,1.0,0.9897,0.9948,0
+Sonar,pro_cnpj_emissor,topics,0.9899,1.0,0.9949,0
+Sonar,pro_covenants_financeiros,topics,0.9655,0.7368,0.8358,0
+Sonar,pro_data_emissao,topics,0.9783,0.9375,0.9574,0
+Sonar,pro_destinacao_recursos,topics,0.9898,1.0,0.9949,0
+Sonar,pro_emissor,topics,1.0,1.0,1.0,0
+Sonar,pro_geral,conhecimento_12,0.9951,0.8909,0.9401,0
+Sonar,pro_numero_emissao,topics,0.9898,0.9898,0.9898,0
+Sonar,pro_prazo_vencimento,topics,0.9785,0.9479,0.963,0
+Sonar,pro_publico_alvo,topics,0.9895,0.9691,0.9792,0
+Sonar,pro_regime_colocacao,topics,0.9897,0.9897,0.9897,0
+Sonar,pro_taxa_juros,topics,1.0,0.8763,0.9341,0
+Sonar,pro_valor_total_emissao,topics,0.9898,1.0,0.9949,0
