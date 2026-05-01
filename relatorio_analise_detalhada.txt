@@ -1,0 +1,111 @@
+ANÁLISE DETALHADA DOS RESULTADOS
+======================================================================
+
+1. VISÃO GERAL
+- Registros normalizados  : 14400
+- Resultados de avaliação : 14400
+- Documentos avaliados    : 100
+- Tópicos avaliados       : 12
+- Modelos avaliados       : 4
+
+2. DETECÇÃO POR DATASET
+                 precision_det  recall_det  f1_det
+dataset_legivel                                   
+conhecimento_12         0.9918      0.9614  0.9758
+topics                  0.9889      0.9745  0.9806
+zeroshoot               0.9843      0.9461  0.9636
+
+3. QUALIDADE POR DATASET
+                 precision_qual  recall_qual  f1_qual  sim_media_qual
+dataset_legivel                                                      
+conhecimento_12             1.0       0.7124   0.8317          0.8873
+topics                      1.0       0.6655   0.7593          0.8653
+zeroshoot                   1.0       0.6606   0.7940          0.8668
+
+4. NÍVEL DOCUMENTO POR DATASET
+                taxa_encontrado                      sim_media_geral                        
+                           mean     std     min  max            mean     std     min     max
+dataset_legivel                                                                             
+conhecimento_12          0.9258  0.1290  0.2083  1.0          0.8520  0.0465  0.6638  0.9450
+topics                   0.9429  0.1175  0.2292  1.0          0.8445  0.0435  0.5809  0.9167
+zeroshoot                0.9183  0.1225  0.2500  1.0          0.8127  0.0715  0.5110  0.9149
+
+5. TRADE-OFF DETECÇÃO vs. QUALIDADE
+- Melhor em detecção : topics (0.9429)
+- Melhor em qualidade: conhecimento_12 (0.8520)
+- Trade-off confirmado: líderes diferentes.
+
+6. RANKING MODELOS — DETECÇÃO
+                                  precision_det  recall_det  f1_det
+modelo                                                             
+GPT-5.1 Com raciocínio                   0.9889      0.9925  0.9905
+Claude Sonnet 4.5 Com raciocínio         0.9792      0.9955  0.9872
+Grok 4.1 Com raciocínio                  0.9980      0.9575  0.9758
+Sonar                                    0.9891      0.9407  0.9628
+
+7. RANKING MODELOS — QUALIDADE
+                                  precision_qual  recall_qual  f1_qual  sim_media_qual
+modelo                                                                                
+Sonar                                        1.0       0.7014   0.7909          0.8812
+Grok 4.1 Com raciocínio                      1.0       0.6930   0.7823          0.8738
+Claude Sonnet 4.5 Com raciocínio             1.0       0.6689   0.7721          0.8699
+GPT-5.1 Com raciocínio                       1.0       0.6108   0.7223          0.8431
+
+8. TOP 15 COMBINAÇÕES (score normalizado 50/50)
+                          modelo                  prompt dataset_legivel  f1_det  sim_media_qual  score_norm_5050
+                           Sonar        pro_cnpj_emissor          topics  0.9949          0.9951         0.984929
+Claude Sonnet 4.5 Com raciocínio        pro_cnpj_emissor          topics  0.9899          0.9951         0.970154
+          GPT-5.1 Com raciocínio        pro_data_emissao          topics  0.9948          0.9853         0.969839
+          GPT-5.1 Com raciocínio        pro_cnpj_emissor          topics  1.0000          0.9743         0.968599
+         Grok 4.1 Com raciocínio        pro_cnpj_emissor          topics  0.9897          0.9930         0.966392
+                           Sonar             pro_emissor          topics  1.0000          0.9664         0.956673
+          GPT-5.1 Com raciocínio             pro_emissor          topics  1.0000          0.9632         0.951842
+Claude Sonnet 4.5 Com raciocínio        pro_data_emissao          topics  0.9846          0.9906         0.947698
+         Grok 4.1 Com raciocínio             pro_emissor          topics  0.9950          0.9634         0.937368
+Claude Sonnet 4.5 Com raciocínio             pro_emissor          topics  1.0000          0.9535         0.937198
+Claude Sonnet 4.5 Com raciocínio pro_valor_total_emissao          topics  0.9949          0.9503         0.917296
+         Grok 4.1 Com raciocínio      pro_numero_emissao          topics  1.0000          0.9316         0.904136
+         Grok 4.1 Com raciocínio        pro_publico_alvo          topics  0.9897          0.9491         0.900118
+         Grok 4.1 Com raciocínio        pro_data_emissao          topics  0.9677          0.9881         0.893983
+         Grok 4.1 Com raciocínio pro_valor_total_emissao          topics  1.0000          0.9234         0.891757
+
+9. TÓPICOS MAIS DIFÍCEIS
+                              taxa_encontrado  sim_media  pct_not_found
+topico                                                                 
+COVENANTS_FINANCEIROS                  0.7125     0.6909         0.2875
+AMORTIZACAO                            0.8975     0.7099         0.1025
+REGIME_DE_COLOCACAO                    0.9625     0.7313         0.0375
+TAXA_DE_JUROS_REMUNERATORIOS           0.9025     0.7426         0.0975
+PRAZO_DE_VENCIMENTO                    0.9292     0.7900         0.0708
+DESTINACAO_DOS_RECURSOS                0.9533     0.8318         0.0467
+PUBLICO_ALVO                           0.9558     0.8735         0.0442
+NUMERO_DA_EMISSAO                      0.9742     0.8837         0.0258
+VALOR_TOTAL_DA_EMISSAO                 0.9517     0.9013         0.0483
+DATA_DE_EMISSAO                        0.9533     0.9547         0.0467
+EMISSOR                                0.9925     0.9574         0.0075
+CNPJ_DO_EMISSOR                        0.9633     0.9638         0.0367
+
+10. DOCUMENTOS MAIS DIFÍCEIS (top 15 médias entre datasets)
+                                              taxa_encontrado  sim_media_geral
+documento                                                                     
+VVEO_7_Escritura-Escritura_20250430_000.pdf            0.7639           0.6869
+ZMPT_1_Escritura_20180611_000.pdf                      0.3264           0.7240
+ADPA_1_Escritura-Escritura_20250613_000.pdf            0.8889           0.7411
+VVEO_6_Escritura-Escritura_20221019_000.pdf            0.8611           0.7466
+TVXV_1_Escritura-Escritura_20210111_000.pdf            0.8333           0.7512
+CMIN_2_Escritura-Escritura_20220712_002.pdf            0.9097           0.7779
+ALGA_12_Escritura-Escritura_20220113_000.pdf           0.9167           0.7798
+AEGE_6_Escritura-Escritura_20240219_000.pdf            0.9306           0.7818
+SMTO_4_Escritura-Escritura_20220117_000.pdf            0.9236           0.7838
+ADPD_1_Escritura-Escritura_20250613_000.pdf            0.9236           0.7884
+VSCF_8_Escritura-Escritura_20250117_000.pdf            0.9028           0.7893
+AEGP_18_Escritura-Escritura_20231002_000.pdf           0.9444           0.7901
+AEGP_9_Escritura-Escritura_20210916_000.pdf            0.9236           0.7904
+AEGE_7_Escritura-Escritura_20241105_000.pdf            0.9375           0.7928
+AEGP_19_Escritura-Escritura_20240605_000.pdf           0.9514           0.7947
+
+11. CONCLUSÕES
+- topics lidera em detecção; conhecimento_12 lidera em qualidade semântica.
+- zeroshoot é a estratégia mais fraca em ambas as dimensões.
+- GPT-5.1 tem melhor detecção; Sonar tem melhor qualidade de conteúdo.
+- Score normalizado mostra diferença real entre estratégias sem distorção de escala.

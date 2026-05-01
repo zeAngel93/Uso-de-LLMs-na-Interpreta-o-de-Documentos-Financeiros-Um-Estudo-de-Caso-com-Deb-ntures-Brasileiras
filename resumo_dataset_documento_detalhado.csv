@@ -1,0 +1,6 @@
+,taxa_encontrado,taxa_encontrado,taxa_encontrado,taxa_encontrado,sim_media_geral,sim_media_geral,sim_media_geral,sim_media_geral
+,mean,std,min,max,mean,std,min,max
+dataset_legivel,,,,,,,,
+conhecimento_12,0.9258,0.129,0.2083,1.0,0.852,0.0465,0.6638,0.945
+topics,0.9429,0.1175,0.2292,1.0,0.8445,0.0435,0.5809,0.9167
+zeroshoot,0.9183,0.1225,0.25,1.0,0.8127,0.0715,0.511,0.9149

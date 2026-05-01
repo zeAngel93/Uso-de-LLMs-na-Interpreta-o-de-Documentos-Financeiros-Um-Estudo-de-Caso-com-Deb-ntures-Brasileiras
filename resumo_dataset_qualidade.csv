@@ -1,0 +1,4 @@
+dataset_legivel,precision_qual,recall_qual,f1_qual,sim_media_qual
+conhecimento_12,1.0,0.7124,0.8317,0.8873
+topics,1.0,0.6655,0.7593,0.8653
+zeroshoot,1.0,0.6606,0.794,0.8668

@@ -1,0 +1,15 @@
+prompt,precision_det,recall_det,f1_det
+pro_emissor,1.0,0.9975,0.9988
+pro_destinacao_recursos,0.9924,1.0,0.9962
+pro_numero_emissao,0.9924,0.9949,0.9936
+pro_cnpj_emissor,0.9925,0.9949,0.9936
+pro_valor_total_emissao,0.9923,0.9948,0.9936
+pro_amortizacao,0.995,0.9897,0.9922
+pro_regime_colocacao,0.9948,0.9897,0.9922
+pro_publico_alvo,0.9922,0.9871,0.9896
+pro_prazo_vencimento,0.9895,0.9766,0.9829
+pro_data_emissao,0.987,0.9662,0.9761
+pro_geral,0.9918,0.9614,0.9758
+pro_taxa_juros,0.9925,0.951,0.9704
+basic,0.9843,0.9461,0.9636
+pro_covenants_financeiros,0.9464,0.852,0.8884

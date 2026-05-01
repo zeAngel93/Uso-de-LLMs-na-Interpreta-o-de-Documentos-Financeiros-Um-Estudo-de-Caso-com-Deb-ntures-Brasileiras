@@ -1,0 +1,5 @@
+modelo,precision_det,recall_det,f1_det
+GPT-5.1 Com raciocínio,0.9889,0.9925,0.9905
+Claude Sonnet 4.5 Com raciocínio,0.9792,0.9955,0.9872
+Grok 4.1 Com raciocínio,0.998,0.9575,0.9758
+Sonar,0.9891,0.9407,0.9628

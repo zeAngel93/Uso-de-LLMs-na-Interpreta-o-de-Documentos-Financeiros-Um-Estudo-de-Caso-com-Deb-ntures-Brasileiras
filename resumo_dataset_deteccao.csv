@@ -1,0 +1,4 @@
+dataset_legivel,precision_det,recall_det,f1_det
+conhecimento_12,0.9918,0.9614,0.9758
+topics,0.9889,0.9745,0.9806
+zeroshoot,0.9843,0.9461,0.9636

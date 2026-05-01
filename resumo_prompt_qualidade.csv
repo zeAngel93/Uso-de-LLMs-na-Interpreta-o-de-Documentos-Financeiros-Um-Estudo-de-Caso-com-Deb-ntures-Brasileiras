@@ -1,0 +1,15 @@
+prompt,precision_qual,recall_qual,f1_qual,sim_media_qual
+pro_cnpj_emissor,1.0,0.9898,0.9948,0.9894
+pro_data_emissao,1.0,0.9892,0.9946,0.9886
+pro_emissor,1.0,0.9022,0.9486,0.9616
+pro_valor_total_emissao,1.0,0.9272,0.9618,0.9263
+pro_numero_emissao,1.0,0.8665,0.927,0.9196
+pro_publico_alvo,1.0,0.8522,0.9154,0.9136
+pro_geral,1.0,0.7124,0.8317,0.8873
+basic,1.0,0.6606,0.794,0.8668
+pro_destinacao_recursos,1.0,0.6211,0.7556,0.8581
+pro_prazo_vencimento,1.0,0.5151,0.6779,0.8225
+pro_covenants_financeiros,1.0,0.3634,0.5304,0.7834
+pro_taxa_juros,1.0,0.3819,0.5416,0.7708
+pro_amortizacao,1.0,0.3747,0.5426,0.7511
+pro_regime_colocacao,1.0,0.203,0.3206,0.6993

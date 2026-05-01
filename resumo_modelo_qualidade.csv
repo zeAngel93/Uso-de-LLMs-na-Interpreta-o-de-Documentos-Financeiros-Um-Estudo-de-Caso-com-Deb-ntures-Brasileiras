@@ -1,0 +1,5 @@
+modelo,precision_qual,recall_qual,f1_qual,sim_media_qual
+Sonar,1.0,0.7014,0.7909,0.8812
+Grok 4.1 Com raciocínio,1.0,0.693,0.7823,0.8738
+Claude Sonnet 4.5 Com raciocínio,1.0,0.6689,0.7721,0.8699
+GPT-5.1 Com raciocínio,1.0,0.6108,0.7223,0.8431
