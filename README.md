@@ -6,5 +6,6 @@ Observação: os arquivos PDF das debêntures não estão incluídos neste repos
   2) IDENTIFICAÇÃO DE SILVERS PROBLEMÁTICOS (identificar_casos_dubios.py).
   3) APLICAÇÃO DE GABARITO MANUAL (aplicar_gabarito.py). 
   4) ANÁLISE DE RESULTADOS (analizar_resultados.py)
- Os demais arquivos (.CSV)  são gerados pelos scripts. 
+
+Os demais arquivos (.CSV)  são gerados pelos scripts. 
 
